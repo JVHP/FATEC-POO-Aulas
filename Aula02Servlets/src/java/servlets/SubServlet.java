@@ -50,7 +50,7 @@ public class SubServlet extends HttpServlet {
                 out.println("<h3 style=\"font-family: arial\">Erro ao identificar os dados contidos nas caixas de dados</h3>");
             }
             out.println("<h3></h3>");
-            out.println("<div style=\"font-family: arial\"><a href='index.html'>Voltar</a></div>");
+            out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='index.html'>Voltar</a></div>");
             out.println("</body>");
             out.println("</html>");
         }

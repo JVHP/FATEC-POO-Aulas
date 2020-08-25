@@ -43,19 +43,30 @@ public class GreetingServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body style=\"background-color: gainsboro\">");
             int h = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
-            if(h<=12){
-                out.println("<h1 style=\"font-family: arial\">Bom Dia</h1>");
+            if(h>=6&&h<12){
+                out.println("<h3 style=\"font-family: arial;color: grey\">Todos dias podem ser especiais<br> Quando temos a dose certa de esperança no coração!</h3>");
+                out.println("<h1 style=\"font-family: arial\">Bom Dia!</h1>");
             }
-            else if(h<=18){
-                out.println("<h1 style=\"font-family: arial\">Boa Tarde</h1>");
+            else if(h>=12&&h<19){
+                out.println("<h3 style=\"font-family: arial;color: grey\">O vencedor não é aquele que vence<br> Mas sim aquele que nunca para de lutar!></h3>");
+                out.println("<h1 style=\"font-family: arial\">Boa Tarde!</h1>");
             }
-            else if(h<=23){
-                out.println("<h1 style=\"font-family: arial\">Boa Noite</h1>");
+            else if((h>=19)&&(h<=23)){
+                out.println("<h3 style=\"font-family: arial;color: grey\">Durma com ideias,<br> Acode com atitude!</h3>");                
+                out.println("<h1 style=\"font-family: arial\">Boa Noite!</h1>");
             }
             else{
-                out.println("<h1 style=\"font-family: arial\">Oque ta fazendo acordado?</h3>");
+                out.println("<h1 style=\"font-family: arial\">Oque ta fazendo acordado á essa hora, caro visitante?</h3>");
+                out.println("<h2 style=\"font-family: arial\">Alguns links pra te ajudar a dormir:</h2>");
+                out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='https://www.youtube.com/watch?v=l7TxwBhtTUY' target='_blank'>Lo-Fi</a></div>");
+                out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='https://www.youtube.com/watch?v=h7vuWEX7zsA' target='_blank'>Video 'relaxante'</a></div>");
+                out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='https://www.youtube.com/watch?v=fyYIwFd4XHM&t=319s' target='_blank'>Musicas The Witcher 3</a></div>");
+                out.println("<h2 style=\"font-family: arial\">Caso você esteja acordando agora, links para ta ajudar a despertar:</h2>");
+                out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='https://www.youtube.com/watch?v=pBZs_Py-1_0' target='_blank'>SoundGarden</a></div>");
+                out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='https://www.youtube.com/watch?v=IpEXM1Yziws' target='_blank'>Alice in Chains</a></div>");
             }
-            out.println("<div style=\"font-family: arial\"><a href='index.html'>Voltar</a></div>");
+            out.println("<h1></h1>");
+            out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='index.html'>Voltar</a></div>");
             out.println("</body>");
             out.println("</html>");
         }

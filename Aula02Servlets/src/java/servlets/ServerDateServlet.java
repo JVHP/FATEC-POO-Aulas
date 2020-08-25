@@ -40,10 +40,9 @@ public class ServerDateServlet extends HttpServlet {
             out.println("<title>Dta/Hora Servidor</title>");            
             out.println("</head>");
             out.println("<body style=\"background-color: gainsboro\">");
-            out.println("<h1 style=\"font-family: arial\">Java Servlets</h1>");
-            out.println("<h2 style=\"font-family: arial\">Data e Hora do Servidor</h2>");
+            out.println("<h2 style=\"font-family: arial;color: grey\">Data e Hora do Servidor</h2>");
             out.println("<h3 style=\"font-family: arial\">"+(new java.util.Date())+"</h3>");
-            out.println("<div style=\"font-family: arial\"><a href='index.html'>Voltar</a></div>");
+            out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='index.html'>Voltar</a></div>");
             out.println("</body>");
             out.println("</html>");
         }

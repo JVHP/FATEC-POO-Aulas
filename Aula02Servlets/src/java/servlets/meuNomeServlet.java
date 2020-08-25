@@ -43,8 +43,8 @@ public class meuNomeServlet extends HttpServlet {
             out.println("<h2 style=\"font-family: arial\">Olá Visitante</h2>");
             out.println("<h2 style=\"font-family: arial\">meu nome é</h2>");
             out.println("<h1 style=\"font-family: arial\">José Vinícius Henrique Pereira</h1>");
-            out.println("<h3 style=\"font-family: arial\">4º Ciclo ADS Noturno FATEC Praia Grande</h3>");
-            out.println("<div style=\"font-family: arial\"><a href='index.html'>Voltar</a></div>");
+            out.println("<h3 style=\"font-family: arial; color: grey\">4º Ciclo ADS Noturno FATEC Praia Grande</h3>");
+            out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='index.html'>Voltar</a></div>");
             out.println("</body>");
             out.println("</html>");
         }
