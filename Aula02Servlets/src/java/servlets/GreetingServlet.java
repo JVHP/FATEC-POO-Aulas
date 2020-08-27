@@ -48,18 +48,18 @@ public class GreetingServlet extends HttpServlet {
                 out.println("<h1 style=\"font-family: arial\">Bom Dia!</h1>");
             }
             else if(h>=12&&h<19){
-                out.println("<h3 style=\"font-family: arial;color: grey\">O vencedor não é aquele que vence<br> Mas sim aquele que nunca para de lutar!></h3>");
+                out.println("<h3 style=\"font-family: arial;color: grey\">O vencedor não é aquele que vence<br> Mas sim aquele que nunca para de lutar!</h3>");
                 out.println("<h1 style=\"font-family: arial\">Boa Tarde!</h1>");
             }
-            else if((h>=19)&&(h<=23)){
-                out.println("<h3 style=\"font-family: arial;color: grey\">Durma com ideias,<br> Acode com atitude!</h3>");                
+            else if(h>=19&&h<=23){
+                out.println("<h3 style=\"font-family: arial;color: grey\">Durma com ideias,<br> Acorde com atitude!</h3>");                
                 out.println("<h1 style=\"font-family: arial\">Boa Noite!</h1>");
             }
             else{
                 out.println("<h1 style=\"font-family: arial\">Oque ta fazendo acordado á essa hora, caro visitante?</h3>");
                 out.println("<h2 style=\"font-family: arial\">Alguns links pra te ajudar a dormir:</h2>");
                 out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='https://www.youtube.com/watch?v=l7TxwBhtTUY' target='_blank'>Lo-Fi</a></div>");
-                out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='https://www.youtube.com/watch?v=h7vuWEX7zsA' target='_blank'>Video 'relaxante'</a></div>");
+                out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='https://www.youtube.com/watch?v=h7vuWEX7zsA' target='_blank'>Video 'relaxante'<br></a></div>");
                 out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='https://www.youtube.com/watch?v=fyYIwFd4XHM&t=319s' target='_blank'>Musicas The Witcher 3</a></div>");
                 out.println("<h2 style=\"font-family: arial\">Caso você esteja acordando agora, links para ta ajudar a despertar:</h2>");
                 out.println("<div style=\"font-family: arial\"><a style=\"text-decoration: none\" href='https://www.youtube.com/watch?v=pBZs_Py-1_0' target='_blank'>SoundGarden</a></div>");
@@ -87,25 +87,12 @@ public class GreetingServlet extends HttpServlet {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+    
     @Override
     public String getServletInfo() {
         return "Short description";
