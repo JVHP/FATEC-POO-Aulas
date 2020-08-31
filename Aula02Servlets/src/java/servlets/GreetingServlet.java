@@ -32,7 +32,7 @@ public class GreetingServlet extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+      throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -44,15 +44,15 @@ public class GreetingServlet extends HttpServlet {
             out.println("<body style=\"background-color: gainsboro\">");
             int h = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
             if(h>=6&&h<12){
-                out.println("<h3 style=\"font-family: arial;color: grey\">Todos dias podem ser especiais<br> Quando temos a dose certa de esperança no coração!</h3>");
+                out.println("<h3 style=\"font-family: arial;color: grey\">Todos dias podem ser especiais<br>Quando temos a dose certa de esperança no coração!</h3>");
                 out.println("<h1 style=\"font-family: arial\">Bom Dia!</h1>");
             }
             else if(h>=12&&h<19){
-                out.println("<h3 style=\"font-family: arial;color: grey\">O vencedor não é aquele que vence<br> Mas sim aquele que nunca para de lutar!</h3>");
+                out.println("<h3 style=\"font-family: arial;color: grey\">O vencedor não é aquele que vence<br>Mas sim aquele que nunca para de lutar!</h3>");
                 out.println("<h1 style=\"font-family: arial\">Boa Tarde!</h1>");
             }
             else if(h>=19&&h<=23){
-                out.println("<h3 style=\"font-family: arial;color: grey\">Durma com ideias,<br> Acorde com atitude!</h3>");                
+                out.println("<h3 style=\"font-family: arial;color: grey\">Durma com ideias,<br>Acorde com atitude!</h3>");                
                 out.println("<h1 style=\"font-family: arial\">Boa Noite!</h1>");
             }
             else{
