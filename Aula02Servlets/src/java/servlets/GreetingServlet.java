@@ -48,7 +48,7 @@ public class GreetingServlet extends HttpServlet {
                 out.println("<h1 style=\"font-family: arial\">Bom Dia!</h1>");
             }
             else if(h>=12&&h<19){
-                out.println("<h3 style=\"font-family: arial;color: grey\">O vencedor não é aquele que vence<br>Mas sim aquele que nunca para de lutar!</h3>");
+                out.println("<h3 style=\"font-family: arial;color: grey\"> O vencedor não é aquele que vence<br>Mas sim aquele que nunca para de lutar!</h3>");
                 out.println("<h1 style=\"font-family: arial\">Boa Tarde!</h1>");
             }
             else if(h>=19&&h<=23){
