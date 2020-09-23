@@ -18,7 +18,7 @@
     </head>
     <body>
         <h1>Java Server Pages</h1>
-        <h2>Minha Idade</h2>
+        <h2>Minha Idade Atual</h2>
         <h3>José Vinícius Henrique Pereira</h3>
         <h3>Idade: <%=idade%></h3>
     </body>
