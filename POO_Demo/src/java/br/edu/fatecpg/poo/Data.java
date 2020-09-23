@@ -16,10 +16,15 @@ public class Data {
     }
     
     public String getData(){
-        String out = "0";
+        String out = "";
         if(dia<10)out+="0";
+        out += dia+"/";
+        if(mes<10)out+="0";
+        out += mes+"/";
+        if(ano<10)out+="0";
+        out += ano;
         
-        return dia+"/"+mes+"/"+ano;
+        return out;
     }
     
     private int dia;

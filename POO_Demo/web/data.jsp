@@ -6,7 +6,7 @@
     Data nasc = new Data(16, 5, 2001);
     nasc.setDia(160);
     nasc.setMes(5);
-    nasc.ano = 2020;
+    nasc.ano = 2001;
     
 %>
 
