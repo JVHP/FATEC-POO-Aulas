@@ -49,8 +49,8 @@
                 <input type="text" name="nome"/>
             </div>
             <div class="form-group">
-                <p>Telefone: </p>
-                <input type="text" name="tel" required/>
+                <p>Telefone com DDD: </p>
+                <input type="text" name="tel"  maxlength="11" required/>
             </div>
             <div class="form-group">
                 <p>e-Mail: </p>
