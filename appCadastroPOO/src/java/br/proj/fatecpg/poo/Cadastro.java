@@ -1,9 +1,9 @@
 package br.proj.fatecpg.poo;
 
 public class Cadastro {
-    String nome;
-    String telefone;
-    String email;
+    private String nome;
+    private String telefone;
+    private String email;
     
     public Cadastro(String nome, String telefone, String email){
         this.nome = nome;
