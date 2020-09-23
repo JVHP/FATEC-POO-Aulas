@@ -50,7 +50,7 @@
                 <input type="text" name="nome"/>
             </div>
             <div class="form-group">
-                <p>Telefone com DDD: </p>
+                <p>Telefone Celular com DDD: </p>
                 <input type="text" name="tel"  maxlength="11" required/>
             </div>
             <div class="form-group">
