@@ -45,7 +45,7 @@ public class Usuario {
         if(methodException != null) throw methodException;
         return lst;
     }
-    public static Usuario getUser(String login, String password) throws Exception{
+    public static Usuario getUsuario(String login, String password) throws Exception{
         Usuario user = null;
         Connection con = null; PreparedStatement stmt = null; ResultSet rs = null;
         Exception methodException = null;
@@ -76,6 +76,29 @@ public class Usuario {
         return user;
     }
 
+    public static void changePassword(String login, String newPassword) throws Exception{
+        Usuario user = null;
+        Connection con = null; PreparedStatement stmt = null; ResultSet rs = null;
+        Exception methodException = null;
+        try {
+            con = DbListener.getConnection();
+            stmt = con.prepareStatement("UPDATE usuarios SET password_hash = ? WHERE login = ?");
+            stmt.setLong(1, newPassword.hashCode());
+            stmt.setString(2, login);
+            stmt.execute();
+        } catch (Exception ex) {
+           methodException = ex;
+           
+        }finally{
+            try{stmt.close();}catch(Exception ex2){}
+            try{con.close();}catch(Exception ex2){}
+            try{rs.close();}catch(Exception ex2){}
+            
+        }
+        if(methodException != null) throw methodException;
+        
+    }
+    
     public Usuario(String login, String nome, String papel) {
         this.login = login;
         this.nome = nome;

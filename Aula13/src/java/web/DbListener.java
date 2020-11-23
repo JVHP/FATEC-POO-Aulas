@@ -9,6 +9,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import java.sql.*;
 import model.Usuario;
+import model.Categoria;
 
 /**
  *
@@ -36,8 +37,9 @@ public class DbListener implements ServletContextListener{
             Class.forName(CLASS_NAME);
             etapa = "Conectando com o Banco de Dados";
             con = DriverManager.getConnection(DB_URL);
-            etapa = "Criando a Tabela de Usuários";
+            etapa = "Preparando o Statement";
             stmt = con.createStatement();
+            etapa = "Criando a Tabela de Usuários";
             stmt.execute(Usuario.getCreateStatement());
             if(Usuario.getList().isEmpty()){
                 stmt.execute("INSERT INTO usuarios VALUES("
@@ -51,6 +53,9 @@ public class DbListener implements ServletContextListener{
                         + "'ALUNO',"
                         + "1234".hashCode()+")");
             }
+            etapa = "Criando a Tabela de Categorias";
+            stmt.execute(Categoria.getCreateStatement());
+            
             etapa = "Desconectando do Banco de Dados";
         
         } catch (Exception ex) {

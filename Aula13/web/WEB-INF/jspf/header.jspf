@@ -13,7 +13,7 @@
     if(request.getParameter("LoginForm")!=null){
         String login = request.getParameter("login");
         String password = request.getParameter("password");
-        Usuario u = Usuario.getUser(login, password);
+        Usuario u = Usuario.getUsuario(login, password);
         if(u == null){
             requestExceptionMessage = "Usuário e/ou Senha Inválido(s)";
         }else{
@@ -47,7 +47,8 @@
         <a href='<%= request.getContextPath()%>/perfil.jsp'>PERFIL</a>
         <%if(session.getAttribute("session.papel").equals("ADMINISTRADOR")){%>    
             | <a href='<%= request.getContextPath()%>/admin.jsp'>ADMINISTRAÇÃO DO SITE</a>
-        <%}%>    
+        <%}%> 
+        | <a href='<%= request.getContextPath()%>/categorias.jsp'>CATEGORIAS</a>
 </form>
 <%}%>
 <hr/>
