@@ -10,6 +10,7 @@ import javax.servlet.ServletContextListener;
 import java.sql.*;
 import model.Usuario;
 import model.Categoria;
+import model.Transacao;
 
 /**
  *
@@ -55,6 +56,9 @@ public class DbListener implements ServletContextListener{
             }
             etapa = "Criando a Tabela de Categorias";
             stmt.execute(Categoria.getCreateStatement());
+            
+            etapa = "Criando a Tabela de Transações";
+            stmt.execute(Transacao.getCreateStatement());
             
             etapa = "Desconectando do Banco de Dados";
         

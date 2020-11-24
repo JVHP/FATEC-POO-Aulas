@@ -43,12 +43,13 @@
 </form> 
 <%}else{%>
 <form method="post">
-    <b><%= session.getAttribute("session.nome")%><b/>&nbsp;<input type="submit" name="LogoutForm" value="Sair">
+    <b><%= session.getAttribute("session.nome")%></b>&nbsp;<input type="submit" name="LogoutForm" value="Sair">
         <a href='<%= request.getContextPath()%>/perfil.jsp'>PERFIL</a>
         <%if(session.getAttribute("session.papel").equals("ADMINISTRADOR")){%>    
             | <a href='<%= request.getContextPath()%>/admin.jsp'>ADMINISTRAÇÃO DO SITE</a>
         <%}%> 
         | <a href='<%= request.getContextPath()%>/categorias.jsp'>CATEGORIAS</a>
+        | <a href='<%= request.getContextPath()%>/transacoes.jsp'>TRANSAÇÕES</a>
 </form>
 <%}%>
 <hr/>

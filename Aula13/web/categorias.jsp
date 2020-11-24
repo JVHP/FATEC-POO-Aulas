@@ -55,7 +55,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Início</title>
+        <title>Categorias - My Finance</title>
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf"%>
@@ -63,6 +63,9 @@
         <%if(session.getAttribute("session.login") == null){%>
             <div>Você não tem permissão de acesso</div>
         <%}else{%>
+            <%if(exceptionMessage != null){%>
+                <div style="color: red"><%= exceptionMessage%></div>
+            <%}%>
             <%if(request.getParameter("prepInsert") != null){%>
                 <h3>Inserir Registro</h3>
                 <form>

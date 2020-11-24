@@ -34,7 +34,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Início</title>
+        <title>Perfil - My Finance</title>
     </head>
     <body>
         <%@include file="WEB-INF/jspf/header.jspf"%>
@@ -54,6 +54,7 @@
             <%if(exceptionMessage != null){%>
                 <div style="color: red"><%= exceptionMessage%></div>
             <%}%>
+            
             <h4>Alterar Senha</h4>
             <form method="post">
                 <div>Senha atual:<div> <input type="password" name="password"></div></div>
